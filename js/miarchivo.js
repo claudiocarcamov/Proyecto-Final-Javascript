@@ -113,7 +113,7 @@ const agregarProducto = document.getElementById("formulario");
 const nombreProducto = document.getElementById("nombreproducto");
 const valorProducto = document.getElementById("valorproducto")
 
-for (i=5; i<prodDesdeObj.length; i++){
+for (i=5; i<prodDesdeObj?.length; i++){
     productos[i] = prodDesdeObj[i];
     const prodDesdeLS = document.createElement('li');
     prodDesdeLS.innerHTML = "Nombre Producto: " + prodDesdeObj[i].nombre + "; Costo: " + prodDesdeObj[i].precio + '<div class="mb-2 mt-2"> <label for="nuevo" class="form-label">Cantidad</label> <input type="text" class="form-control" id="nuevo" placeholder="Ej: 10" name="nuevo"> </div>'
