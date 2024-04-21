@@ -48,10 +48,8 @@ document.getElementById("region")?.addEventListener('change', (event) => {
     valueRegion = event.target.value
 
     //Si mensaje del valor de costo de envío ya está mostrado en HTML, debe borrarlo primero para mostrar el siguiente
-    if (ingresado == true){
-        mensaje.remove();
-        ingresado = false;
-    }
+    ingresado == true && mensaje.remove();
+    ingresado = false;
 
     if (valueRegion == "metropolitana"){
         precioEnvio = 2000;
@@ -64,7 +62,7 @@ document.getElementById("region")?.addEventListener('change', (event) => {
     }
 
     mensaje = document.createElement("p");
-    mensaje.innerText = "El precio del envío es " + precioEnvio ;
+    mensaje.innerText = "El precio del envío es " + precioEnvio;
     seleccionar.append (mensaje)
     ingresado = true;
     return precioEnvio;
