@@ -185,6 +185,7 @@ function validarFormulario (e){
     e.preventDefault();
 }
 
+//Se realiza fetch desde API externa de chistes
 const listaChistes = document.getElementById ("chistes")
 fetch('https://v2.jokeapi.dev/joke/Any?lang=es&type=single')
     .then((response) => response.json())
