@@ -184,3 +184,13 @@ const seleccionarRegion = document.getElementById("regionvalpo")
 function validarFormulario (e){
     e.preventDefault();
 }
+
+const listaChistes = document.getElementById ("chistes")
+fetch('https://v2.jokeapi.dev/joke/Any?lang=es&type=single')
+    .then((response) => response.json())
+    .then(data => {
+        const p = document.createElement("p");
+        p.innerHTML = data.joke
+        listaChistes.append(p);
+    }
+    )
